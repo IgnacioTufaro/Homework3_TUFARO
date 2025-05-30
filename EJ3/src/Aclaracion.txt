@@ -1,0 +1,3 @@
+Para este ejercicio, opte por incluir las definiciones de los metodos de las clases en el mismo hpp (como me fue indicado en la clase tutorial).
+Ya que, al separarlas generaba complicaciones con los templates que me obligaban a especificar cada metodo para cada tipo de template. 
+De esta manera, queda mas prolijo y lejible. 
