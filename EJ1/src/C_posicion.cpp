@@ -1,9 +1,9 @@
 #include "../headers/C_posicion.hpp"
 
 //Constructor por parametros de inicializacion
-Posicion::Posicion(float lat,float lon,float alt,float t):latitud(lat),longitud(lon),altitud(alt),MedicionBase(t){}   
+Posicion::Posicion(float lat,float lon,float alt,float t):MedicionBase(t),latitud(lat),longitud(lon),altitud(alt){}   
 //Constructor por copia (deepcopy)
-Posicion::Posicion(const Posicion& other): latitud(other.latitud),altitud(other.altitud),longitud(other.longitud),MedicionBase(*other.Tmedicion){}
+Posicion::Posicion(const Posicion& other):MedicionBase(*other.Tmedicion),latitud(other.latitud),longitud(other.longitud),altitud(other.altitud){}
 
 void Posicion::serializar(ofstream& out)const{
     MedicionBase::serializar(out);

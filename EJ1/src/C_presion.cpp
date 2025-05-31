@@ -1,9 +1,9 @@
 #include "../headers/C_presion.hpp"
 
 //Constructor por parametros de inicializacion
-Presion::Presion(float p, float q, float t):Pestatica(p),Pdinamica(q),MedicionBase(t){}
+Presion::Presion(float p, float q, float t):MedicionBase(t),Pestatica(p),Pdinamica(q){}
 //Constructor por copia (deepcopy)
-Presion::Presion(const Presion& other):Pestatica(other.Pestatica),Pdinamica(other.Pdinamica),MedicionBase(*other.Tmedicion){}
+Presion::Presion(const Presion& other):MedicionBase(*other.Tmedicion),Pestatica(other.Pestatica),Pdinamica(other.Pdinamica){}
 
 void Presion::serializar(ofstream& out) const{
     MedicionBase::serializar(out);

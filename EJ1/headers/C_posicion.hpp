@@ -6,8 +6,9 @@ class Posicion : public MedicionBase{
     public:
         //Atributos publicos
         float latitud;
-        float altitud;
         float longitud;
+        float altitud;
+        
         //Constructor default
         Posicion() = default;
         //Constructor por parametros de inicializacion

@@ -21,8 +21,10 @@ class ConstructorJSON{
         string createJSON()const{
             ostringstream os;
             os<<"{";
-            for(auto line : datos){
-                os<<"  "<<line<<"\n";
+            for(size_t i=0; i<datos.size(); i++){
+                os<<"  "<<datos[i];
+                if(i+1<datos.size()){os<<", ";}
+                os<<"\n";
             }
             os<<"}"<<endl;
             return os.str();

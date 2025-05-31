@@ -1,6 +1,6 @@
 #include "../headers/ProcesadorFigura.hpp"
 
-//g++ EJ2/src/* .cpp EJ2/examples/main.cpp -o EJ2/ex && EJ2/ex
+//g++ EJ2/src/*.cpp EJ2/examples/main.cpp -o EJ2/ex && EJ2/ex
 
 int main() {
     //Prueba de Punto

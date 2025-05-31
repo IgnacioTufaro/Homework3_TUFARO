@@ -8,7 +8,7 @@ using namespace std;
 template<typename T>
 class ProcesadorFigura{
     public:
-        static string area(T t){return "Figura no valida";}
+        static string area(T t){return "Figura de tipo \""+string(typeid(t).name())+"\" no valida";}
 };
 //Solo quiero usar el metodo de la funcion sin instanciarla ==> los defino como static
 template<>

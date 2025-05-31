@@ -31,7 +31,7 @@ class ConstructorListas{
             if constexpr(is_same_v<T,double>){
                 ostringstream os;
                 os<<"[";
-                for(int i=0; i<datos.size();i++){
+                for(size_t i=0; i<datos.size();i++){
                     os<<datos[i];
                     if(i+1<datos.size()){os<<", ";}
                 }
@@ -41,7 +41,7 @@ class ConstructorListas{
             else if constexpr(is_same_v<T,string>){
                 ostringstream os;
                 os<<"[";
-                for(int i=0; i<datos.size();i++){
+                for(size_t i=0; i<datos.size();i++){
                     os<<"\""<<datos[i]<<"\"";
                     if(i+1<datos.size()){os<<", ";}
                 }
@@ -51,13 +51,15 @@ class ConstructorListas{
             else if constexpr(is_same_v<T,vector<int>>){
                 ostringstream os;
                 os<<"[\n";
-                for(auto vec : datos){
+                for(size_t j=0; j<datos.size(); j++){
                     os<<"\t[";
-                    for(int i=0; i<vec.size();i++){
-                        os<<vec[i];
-                        if(i+1 < vec.size()){os<<", ";}
+                    for(size_t i=0; i<datos[j].size();i++){
+                        os<<datos[j][i];
+                        if(i+1 < datos[j].size()){os<<", ";}
                     }
-                    os<<"]\n";
+                    os<<"]";
+                    if(j+1 < datos.size()){os<<", ";}
+                    os<<"\n";
                 }
                 os<<"\t]";
                 return os.str();
