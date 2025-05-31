@@ -15,7 +15,7 @@ g++ EJ1/src/*.cpp EJ1/examples/main.cpp -o EJ1/ex && EJ1/ex
 ### Ejercicio 2:
 
 ```bash
-g++ EJ2/src/* .cpp EJ2/examples/main.cpp -o EJ2/ex && EJ2/ex
+g++ EJ2/src/*.cpp EJ2/examples/main.cpp -o EJ2/ex && EJ2/ex
 ```
 
 ---
